@@ -58,12 +58,14 @@
                                                     <color key="textColor" red="1" green="0.0" blue="0.058155415096606156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0X2-JS-aZM">
-                                                    <rect key="frame" x="290" y="68.5" width="75" height="25"/>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0X2-JS-aZM" userLabel="SettingsButtonView">
+                                                    <rect key="frame" x="0.0" y="43.5" width="200" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2W-QX-tnK">
-                                                            <rect key="frame" x="16" y="1.5" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2W-QX-tnK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" red="0.15135042830000001" green="0.60682367699999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <gestureRecognizers/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -74,24 +76,25 @@
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="VRr-oL-JyU"/>
-                                                        <constraint firstAttribute="height" constant="25" id="jQr-Nn-PW9"/>
-                                                    </constraints>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="rI5-9c-s9x" appends="YES" id="Sxe-lT-nhM"/>
+                                                        <outletCollection property="gestureRecognizers" destination="rI5-9c-s9x" appends="YES" id="dNs-ve-LL4"/>
+                                                    </connections>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="3VC-y4-Ghx" secondAttribute="trailing" id="8m8-rl-mlz"/>
-                                                <constraint firstAttribute="bottom" secondItem="0X2-JS-aZM" secondAttribute="bottom" id="Psa-sY-NrW"/>
                                                 <constraint firstItem="3VC-y4-Ghx" firstAttribute="leading" secondItem="hwj-7A-z6m" secondAttribute="leadingMargin" id="aXc-pX-uIr"/>
                                                 <constraint firstItem="3VC-y4-Ghx" firstAttribute="top" secondItem="hwj-7A-z6m" secondAttribute="topMargin" id="b1o-mg-X9Q"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="3VC-y4-Ghx" secondAttribute="bottom" id="nBI-Hf-yHN"/>
-                                                <constraint firstAttribute="trailing" secondItem="0X2-JS-aZM" secondAttribute="trailing" constant="10" id="z9V-dC-56j"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
                                         <connections>
                                             <outlet property="onErrorLabel" destination="3VC-y4-Ghx" id="Uf5-bN-uRf"/>
                                             <outlet property="settingsButton" destination="F2W-QX-tnK" id="lAy-vc-D6b"/>
+                                            <outletCollection property="gestureRecognizers" destination="rI5-9c-s9x" appends="YES" id="xmW-UZ-HSa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -118,7 +121,7 @@
                 <exit id="DKV-5s-g8y" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="rI5-9c-s9x">
                     <connections>
-                        <action selector="tapSettings:" destination="DKV-5s-g8y" id="FQJ-eV-6Os"/>
+                        <action selector="goToSettings:" destination="DKV-5s-g8y" id="bST-15-whF"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

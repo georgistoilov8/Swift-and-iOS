@@ -13,14 +13,12 @@ class ErrorCell: UITableViewCell {
     @IBOutlet weak var onErrorLabel: UILabel!
     
     @IBOutlet weak var settingsButton: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    @IBAction func tapSettings(_ sender: Any) {
-      UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
